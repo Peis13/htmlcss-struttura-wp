@@ -1,0 +1,89 @@
+/* Regole di reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Fine Regole di reset */
+
+/* Inizio container */
+.container {
+  padding: 0 20px;
+}
+/* Fine container */
+
+/* Inizio Header */
+header {
+  height: 200px;
+  background: yellow;
+}
+/* Fine Header */
+
+/* Inizio Main */
+main {
+  margin: 10px 0;
+}
+main .col {
+  float: left;
+}
+main .col.left {
+  width: 27%;
+  height: 300px;
+  background: violet;
+}
+main .col.center {
+  width: 42%;
+  height: 400px;
+  background: purple;
+  margin: 0 2%;
+}
+
+/* Col.right Soluzione coi margini */
+main .col.right {
+  width: 27%;
+  height: 400px;
+}
+main .col.right .box {
+  width: 100%;
+  height: 45%;
+  background: violet;
+  margin-bottom: 20px;
+}
+/* Fine Col.right Soluzione coi margini */
+
+
+/* Col.right Soluzione con position */
+/* Le dimensioni sono sempre le stesse */
+
+/*
+main .col.right {
+  width: 27%;
+  height: 400px;
+  position: relative;
+}
+main .col.right .box {
+  width: 100%;
+  height: 45%;
+  background: violet;
+}
+main .col.right .box:last-child {
+  position: absolute;
+  bottom: 5%;
+}
+ */
+
+/* Fine Col.right Soluzione con position */
+
+main::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+/* Fine Main */
+
+/* Inizio Footer */
+footer {
+  height: 100px;
+  background: lightblue;
+}
+/* Fine Footer */
